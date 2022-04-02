@@ -47,7 +47,7 @@ export default class Form extends Component {
                 <form onSubmit={this.onSubmit}>
                 <div className = "form-group">
                     <label>Price</label>
-                    <input type = "number" step={'0.00001'} className='form-control' value = {this.state.price} onChange = {this.onChangePrice}/>
+                    <input type = "number" className='form-control' value = {this.state.price} onChange = {this.onChangePrice}/>
                 </div>
                 <div className = "form-group">
                     <label>Amount</label>
@@ -55,7 +55,17 @@ export default class Form extends Component {
                 </div>
                 <div className = "form-group">
                     <label>Select</label>
-                    <input type = "number" className='form-control' value = {this.state.select} onChange = {this.onChangeSelect}/>
+
+                    <select>
+                        <input type = "text" className='form-control' value = {this.state.select} onChange = {this.onChangeSelect}/>
+                        <option align = 'center'>--select--</option>
+                        <option>Token0 to Token1</option>
+                        <option>Token1 to Token0</option>
+                        
+                    </select>
+                  
+                
+                    
                 </div>
                 <button type = "submit" className='btn btn-primary btn-block'>Submit</button>
                 </form>
@@ -64,3 +74,4 @@ export default class Form extends Component {
         )
     }
 }
+
